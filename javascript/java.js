@@ -12,22 +12,40 @@ function Tabla() {
   Tabla.innerHTML = res;
 }
 
-function sumaRandom() {
+function SumaNum() {
   let num1 = Math.floor(Math.random() * 10) + 1;
   let num2 = Math.floor(Math.random() * 10) + 1;
-  let resultadoCorrecto = num1 + num2;
+  let res = num1 + num2;
 
   let inicioTiempo = performance.now();
-  let respuestaUsuario = parseInt(prompt(`¿Cuánto es ${num1} + ${num2}?`));
+  let respuesta = parseInt(prompt(`¿Cuánto es ${num1} + ${num2}?`));
   let finTiempo = performance.now();
 
-  let tiempoTranscurrido = ((finTiempo - inicioTiempo) / 1000).toFixed(2);
+  let tiempo= ((finTiempo - inicioTiempo) / 1000).toFixed(2);
 
-  if (respuestaUsuario === resultadoCorrecto) {
-    alert(`Correcto! Tardaste ${tiempoTranscurrido} segundos.`);
+  if (respuesta == res) {
+    alert(`Correcto, tardaste ${tiempo} segundos en contestar.`);
   } else {
     alert(
-      `Incorrecto. La respuesta era ${resultadoCorrecto}. Tardaste ${tiempoTranscurrido} segundos.`
+      `Incorrecto. Tardaste ${tiempo} segundos en contestar.`
     );
   }
+}
+
+function contador() {
+    const input = prompt("Ingresa un arreglo de números:");
+    let arr = input.split(" ");
+    let negativos = arr.filter(num => num < "0").length;
+    let ceros = arr.filter(num => num === "0").length;
+    let positivos = arr.filter(num => num > "0").length;
+    alert(`Hay ${negativos} números negativos, ${ceros} ceros y ${positivos} números positivos.`);
+}
+
+function promedios(){
+    console.log("pito");
+    
+}
+
+function inverso(){
+    console.log("jorge es gay")
 }
