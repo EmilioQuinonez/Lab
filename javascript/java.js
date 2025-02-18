@@ -1,5 +1,5 @@
 function Tabla() {
-  const num = parseInt(prompt("Ingresa un número: "));
+  let num = parseInt(prompt("Ingresa un número: "));
   let res = "<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>";
   let Tabla = document.getElementById("Tabla");
 
@@ -39,9 +39,8 @@ function contador() {
   let negativos = arr.filter((num) => num < "0").length;
   let ceros = arr.filter((num) => num === "0").length;
   let positivos = arr.filter((num) => num > "0").length;
-  alert(
-    `Hay ${negativos} números negativos, ${ceros} ceros y ${positivos} números positivos.`
-  );
+  let texto1 = document.getElementById("texto1");
+  texto1.innerHTML = "Hay " + negativos + " números negativos," + ceros + " ceros y " + positivos + " números positivos."
 }
 
 function promedios() {
@@ -49,5 +48,9 @@ function promedios() {
 }
 
 function inverso() {
-  console.log("jorge es gay");
+    const num = parseInt(prompt("Ingresa número que deseas invertir: "))
+    let fun = num.toString().split('').reverse().join('');
+    let invertir = Number(fun);
+    let texto2 = document.getElementById("texto2");
+    texto2.innerHTML = "El número inverido es " + invertir + ".";
 }
