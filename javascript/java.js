@@ -40,17 +40,34 @@ function contador() {
   let ceros = arr.filter((num) => num === "0").length;
   let positivos = arr.filter((num) => num > "0").length;
   let texto1 = document.getElementById("texto1");
-  texto1.innerHTML = "Hay " + negativos + " números negativos," + ceros + " ceros y " + positivos + " números positivos."
+  texto1.innerHTML =
+    "Hay " +
+    negativos +
+    " números negativos," +
+    ceros +
+    " ceros y " +
+    positivos +
+    " números positivos.";
 }
 
-function promedios() {
-  console.log("pito");
+function promedio(matriz) {
+  const resp = {};
+  let i = 0;
+  matriz.forEach((arreglo) => {
+    resp[i] = 0;
+    arreglo.forEach((a) => {
+      resp[i] += a;
+    });
+    resp[i] /= arreglo.length;
+    i++;
+  });
+  return resp;
 }
 
 function inverso() {
-    const num = parseInt(prompt("Ingresa número que deseas invertir: "))
-    let fun = num.toString().split('').reverse().join('');
-    let invertir = Number(fun);
-    let texto2 = document.getElementById("texto2");
-    texto2.innerHTML = "El número inverido es " + invertir + ".";
+  const num = parseInt(prompt("Ingresa número que deseas invertir: "));
+  let fun = num.toString().split("").reverse().join("");
+  let invertir = Number(fun);
+  let texto2 = document.getElementById("texto2");
+  texto2.innerHTML = "El número inverido es " + invertir + ".";
 }
