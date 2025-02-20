@@ -71,3 +71,16 @@ function inverso() {
   let texto2 = document.getElementById("texto2");
   texto2.innerHTML = "El número inverido es " + invertir + ".";
 }
+
+function suma() {
+  const numero = parseInt(prompt("Ingresa un número de 5 digitos: "));
+  let arr = numero.toString().split("");
+  let acum = 0;
+  let conv = 0;
+  let texto4 = document.getElementById("texto4");
+  for (let i = 0; i < arr.length; i++) {
+    conv = parseInt(arr[i]);
+    acum = acum + conv;
+  }
+  texto4.innerHTML = "La suma de los digitos " + numero + " es: " + acum;
+}
