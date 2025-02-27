@@ -11,7 +11,7 @@ const prom = (array) => {
 console.log("El promedio es: ", prom(array));
 
 const FileSystem = require("fs");
-FileSystem.writeFileSync("lab_8.txt", "Profe pongame 100");
+FileSystem.writeFileSync("lab_8.txt", "Profe pongame 100 :)");
 
 const num = 12345;
 
