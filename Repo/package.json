@@ -4,7 +4,7 @@
   "description": "Laboratorios de TCB2005B feb-jun 2025 QRO",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "sesion": "^0.0.0"
   }
 }
