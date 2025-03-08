@@ -1,0 +1,22 @@
+{
+  "name": "papu",
+  "version": "1.0.0",
+  "description": "siu",
+  "main": "LAB10.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmilioQuinonez/Lab.git"
+  },
+  "author": "Emilio Lopez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmilioQuinonez/Lab/issues"
+  },
+  "homepage": "https://github.com/EmilioQuinonez/Lab#readme",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
