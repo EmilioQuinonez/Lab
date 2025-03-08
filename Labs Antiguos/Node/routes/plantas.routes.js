@@ -41,11 +41,11 @@ Pagina realizada por un amante de las plantas;
 const plantas_peligrosas = [];
 const plantas_favoritas = [];
 
-router.get(["/peligro/add", "/peligro"], (request, response, next) => {
-  res.send(html_header + html_peligroso + html_footer);
+router.get("/peligro", (request, response, next) => {
+  response.send(html_header + html_peligroso + html_footer);
 });
 
-router.post(["/peligro/add", "/peligro"], (request, response, next) => {
+router.post("/peligro/add", (request, response, next) => {
   const nom_planta = request.body.nomPeligrosa;
 
   if (nom_planta) {
@@ -61,11 +61,11 @@ router.post(["/peligro/add", "/peligro"], (request, response, next) => {
   response.send(html);
 });
 
-router.get(["/favorita/add", "/favorita"], (request, response, next) => {
-  res.send(html_header + html_favorita + html_footer);
+router.get("/favorita", (request, response, next) => {
+  response.send(html_header + html_favorita + html_footer);
 });
 
-router.post(["/favorita/add", "/favorita"], (request, response, next) => {
+router.post("/favorita/add", (request, response, next) => {
   const nom_planta = request.body.nomFavorita;
 
   if (nom_planta) {
