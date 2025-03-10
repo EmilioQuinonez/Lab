@@ -4,6 +4,7 @@ const bodyParser = require("body-parser"); // Importa body-parser
 const path = require("path"); // Permite usar direcciones del sistema
 
 const session = require("express-session");
+const main_controller = require("./controllers/main.controller.js");
 
 app.use(
   session({
@@ -31,6 +32,9 @@ app.use("/", mainRoutes);
 
 const distroRoutes = require("./routes/distros.routes.js");
 app.use("/distros", distroRoutes);
+
+const logRoutes = require("./routes/users.routes.js");
+app.use("/log", logRoutes);
 
 app.use((req, res) => {
   res.status(404).render("error404");
