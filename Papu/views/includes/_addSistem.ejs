@@ -1,0 +1,25 @@
+<form action="/sistems/add" method="POST" class="space-y-4">
+  <div>
+    <label for="sistem" class="block text-sm mb-2"
+      >Selecciona tu sistem operativo favorito</label
+    >
+    <select
+      name="sistem"
+      id="sistem"
+      class="w-full p-2 bg-slate-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-600"
+    >
+      <option value="windows">Windows</option>
+      <option value="macos">MacOs</option>
+      <option value="linux">Linux</option>
+      <option value="android">Android</option>
+      <option value="no_he_usado">No he usado</option>
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full p-3 mt-4 rounded-md bg-slate-600 text-white hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500 cursor-pointer"
+  >
+    Enviar
+  </button>
+</form>
