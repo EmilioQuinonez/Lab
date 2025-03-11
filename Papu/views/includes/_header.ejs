@@ -26,16 +26,16 @@
             <a href="/">Laboratorio 17</a>
           </div>
           <div class="flex space-x-4">
-            <% if(datosLog.loggedState == true) { %><%-
+            <% if(loggedState == true) { %><%-
                 include('./_logOutButton') %><% } else { %><%-
                 include('./_logInButton') %><% } %>
           </div>
         </div>
       </nav>
 
-      <% if(datosLog.loggedState == true) { %>
+      <% if(loggedState == true) { %>
       <h2 class="text-xl text-center text-slate-100 mb-6">
-        Bienvenido, <%= datosLog.username %>
+        Bienvenido, <%= username %>
       </h2>
       <% } %>
 

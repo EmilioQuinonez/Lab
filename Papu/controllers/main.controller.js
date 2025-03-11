@@ -5,9 +5,7 @@ exports.get = (req, res, next) => {
         username: req.session.username || "",
     }
 
-    res.render('main', {
-        datosLog: datosLog
-    });
+    res.render('main', { ...datosLog });
 }
 
 
@@ -18,9 +16,7 @@ exports.get_questions = (req, res, next) => {
         username: req.session.username || "",
     }
 
-    res.render('questions', {
-        datosLog: datosLog
-    });
+    res.render('questions', { ...datosLog });
 }
 
 exports.get_about = (req, res, next) => {
@@ -30,7 +26,5 @@ exports.get_about = (req, res, next) => {
         username: req.session.username || "",
     }
 
-    res.render('about', {
-        datosLog: datosLog
-    });
+    res.render('about', { ...datosLog });
 }

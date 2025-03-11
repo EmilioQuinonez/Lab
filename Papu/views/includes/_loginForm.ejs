@@ -1,4 +1,17 @@
-<form action="/log/in" method="POST">
+<% if (info != '') { %>
+  <div class="notification is-info">
+      <%= info %>
+  </div>
+<% } %>
+
+<% if (warning != '') { %>
+  <div class="notification is-warning">
+      <%= warning %>
+  </div>
+<% } %>
+
+<form action="/log/<% if (isNew) { %>signup<% } else { %>in<% } %>" method="POST">
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
     <div>
       <label for="username">Usuario:</label>
       <input type="text" name="username" id="username" style="padding: 8px; border-radius: 8px; border: 1px solid #ccc; width: 100%; max-width: 300px;" />

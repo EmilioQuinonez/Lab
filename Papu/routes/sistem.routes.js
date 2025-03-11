@@ -2,15 +2,17 @@ const express = require("express");
 const router = express.Router();
 const sistem_controller = require("../controllers/sistem.controller");
 
+const isAuth = require('../util/is-Auth');
+
 // Manda a llamar los controllers
-router.get("/", sistem_controller.get_sistem);
+router.get("/", isAuth, sistem_controller.get_sistem);
 
-router.get("/add", sistem_controller.get_sistem_add);
+router.get("/add", isAuth, sistem_controller.get_sistem_add);
 
-router.post("/add", sistem_controller.post_sistem_add);
+router.post("/add", isAuth, sistem_controller.post_sistem_add);
 
-router.get("/list", sistem_controller.get_sistem_list);
+router.get("/list", isAuth, sistem_controller.get_sistem_list);
 
-router.get("/:sistem", sistem_controller.get_sistem_id);
+router.get("/:sistem", isAuth, sistem_controller.get_sistem_id);
 
 module.exports = router;

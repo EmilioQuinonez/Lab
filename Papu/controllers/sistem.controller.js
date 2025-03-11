@@ -1,39 +1,34 @@
-const { Cookie } = require("express-session");
 const Sistem = require("../models/sistem.model");
 const moment = require("moment");
 
 exports.get_sistem = (req, res, next) => {
   const datosLog = {
     loggedState: req.session.isLoggedIn || false,
-    lastId: req.session.insertId || -1,
     username: req.session.username || "",
+    csrfToken: req.csrfToken(),
   };
 
-  res.render("sistems", {
-    datosLog: datosLog,
-  });
+  res.render("sistems", { ...datosLog });
 };
 
 exports.get_sistem_add = (req, res, next) => {
   const datosLog = {
     loggedState: req.session.isLoggedIn || false,
-    lastId: req.session.insertId || -1,
     username: req.session.username || "",
+    csrfToken: req.csrfToken(),
   };
 
-  res.render("add_sistem", {
-    datosLog: datosLog,
-  });
+  res.render("add_sistem", { ...datosLog });
 };
 
 exports.post_sistem_add = (req, res, next) => {
   const datosLog = {
     loggedState: req.session.isLoggedIn || false,
-    lastId: req.session.insertId || -1,
     username: req.session.username || "",
+    csrfToken: req.csrfToken(),
   };
 
-  const mi_Sistem = new Sistem(datosLog.username, req.body.sistem); // Creo la clase con los datos del form
+  const mi_Sistem = new Sistem(datosLog.username, req.body.sistem); // Crear la instancia con los datos
 
   mi_Sistem
     .save()
@@ -47,18 +42,15 @@ exports.post_sistem_add = (req, res, next) => {
 exports.get_sistem_list = (req, res, next) => {
   const datosLog = {
     loggedState: req.session.isLoggedIn || false,
-    lastId: req.session.insertId || -1,
     username: req.session.username || "",
+    csrfToken: req.csrfToken(),
   };
 
-  // Manda a mostrar las personas que han votado por alguna sistem
-
-  Sistem.fetchAll() // Obtiene la query de la base de datos
+  Sistem.fetchAll()
     .then(([rows, list_sistem]) => {
-      // Si la query es exitosa, manda a renerizarla con los datos de su row
       res.render("list_sistem", {
         entrevistas: rows,
-        datosLog: datosLog,
+        ...datosLog,
       });
     })
     .catch((err) => console.log(err));
@@ -69,8 +61,8 @@ exports.get_sistem_id = (req, res, next) => {
 
   const datosLog = {
     loggedState: req.session.isLoggedIn || false,
-    lastId: req.session.insertId || -1,
     username: req.session.username || "",
+    csrfToken: req.csrfToken(),
   };
 
   Sistem.fetchBySistem(sistem)
@@ -83,8 +75,8 @@ exports.get_sistem_id = (req, res, next) => {
 
       res.render("oneSistem", {
         entrevistas: rows,
-        datosLog: datosLog,
         sistem: sistem,
+        ...datosLog,
       });
     })
     .catch((err) => console.log(err));
