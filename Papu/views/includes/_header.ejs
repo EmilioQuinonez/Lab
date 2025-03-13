@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Laboratorio 17</title>
+    <title>Laboratorio 19</title>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,9 +26,8 @@
             <a href="/">Laboratorio 17</a>
           </div>
           <div class="flex space-x-4">
-            <% if(loggedState == true) { %><%-
-                include('./_logOutButton') %><% } else { %><%-
-                include('./_logInButton') %><% } %>
+            <% if(loggedState == true) { %><%- include('./_logOutButton') %><% }
+            else { %><%- include('./_logInButton') %><% } %>
           </div>
         </div>
       </nav>
@@ -38,4 +37,6 @@
         Bienvenido, <%= username %>
       </h2>
       <% } %>
-
+    </div>
+  </body>
+</html>
