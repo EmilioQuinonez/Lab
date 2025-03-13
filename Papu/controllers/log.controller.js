@@ -16,6 +16,7 @@ exports.get_signup = (req, res, next) => {
         info: mensaje,
         warning: '',
         csrfToken: req.csrfToken(),
+        privilegios: req.session.privilegios || [],
     }
 
     res.render('login', { ...datosLog });
@@ -51,6 +52,7 @@ exports.get_in = (req, res, next) => {
         info: mensaje,
         warning: warning,
         csrfToken: req.csrfToken(),
+        privilegios: req.session.privilegios || [],
     }
 
     res.render('login', { ...datosLog });
@@ -62,10 +64,16 @@ exports.post_in = (req, res, next) => {
             const bcrypt = require('bcryptjs');
             bcrypt.compare(req.body.password, rows[0].password).then((doMatch) => {
                 if (doMatch) {
-                    req.session.isLoggedIn = true;
-                    req.session.username = req.body.username;
-                    return req.session.save((error) => {
-                        res.redirect('/')
+                    Usuario.getPrivilegios(rows[0].username).then(([privilegios, fieldData]) => {
+                        req.session.privilegios = privilegios,
+                        req.session.isLoggedIn = true;
+                        req.session.username = req.body.username;
+                        
+                        return req.session.save((error) => {
+                            res.redirect('/')
+                        });
+                    }).catch((error) => {
+                        console.log(error);
                     });
                 }
                 else {

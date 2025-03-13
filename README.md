@@ -79,3 +79,7 @@ npm start
 ### Laboratorio 18:
 
 Éste laboratorio fue elaborado únicamente por mi.
+
+### Laboratorio 19:
+
+Éste laboratorio fue elaborado en conjunto con Manuel Bajos Rivera

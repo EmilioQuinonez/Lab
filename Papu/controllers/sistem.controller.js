@@ -6,6 +6,8 @@ exports.get_sistem = (req, res, next) => {
     loggedState: req.session.isLoggedIn || false,
     username: req.session.username || "",
     csrfToken: req.csrfToken(),
+    privilegios: req.session.privilegios || [],
+    
   };
 
   res.render("sistems", { ...datosLog });
@@ -16,6 +18,7 @@ exports.get_sistem_add = (req, res, next) => {
     loggedState: req.session.isLoggedIn || false,
     username: req.session.username || "",
     csrfToken: req.csrfToken(),
+    privilegios: req.session.privilegios || [],
   };
 
   res.render("add_sistem", { ...datosLog });
@@ -26,6 +29,7 @@ exports.post_sistem_add = (req, res, next) => {
     loggedState: req.session.isLoggedIn || false,
     username: req.session.username || "",
     csrfToken: req.csrfToken(),
+    privilegios: req.session.privilegios || [],
   };
 
   const mi_Sistem = new Sistem(datosLog.username, req.body.sistem); // Crear la instancia con los datos
@@ -44,6 +48,7 @@ exports.get_sistem_list = (req, res, next) => {
     loggedState: req.session.isLoggedIn || false,
     username: req.session.username || "",
     csrfToken: req.csrfToken(),
+    privilegios: req.session.privilegios || [],
   };
 
   Sistem.fetchAll()
@@ -63,6 +68,7 @@ exports.get_sistem_id = (req, res, next) => {
     loggedState: req.session.isLoggedIn || false,
     username: req.session.username || "",
     csrfToken: req.csrfToken(),
+    privilegios: req.session.privilegios || [],
   };
 
   Sistem.fetchBySistem(sistem)
