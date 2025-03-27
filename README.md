@@ -83,3 +83,15 @@ npm start
 ### Laboratorio 19:
 
 Éste laboratorio fue elaborado en conjunto con Manuel Bajos Rivera
+
+### Laboratorio 20:
+
+Éste laboratorio fue elaborado únicamente por mi.
+
+### Laboratorio 21:
+
+Éste laboratorio fue elaborado únicamente por mi.
+
+### Laboratorio 22:
+
+Éste laboratorio fue implementado en el proyecto elaborado en conjunto con Edmundo Canedo Cervantes, Yael Charles Marin y Manuel Bajos Rivera.
