@@ -94,4 +94,8 @@ npm start
 
 ### Laboratorio 22:
 
-Éste laboratorio fue implementado en el proyecto elaborado en conjunto con Edmundo Canedo Cervantes, Yael Charles Marin y Manuel Bajos Rivera.
+Éste laboratorio fue implementado en el proyecto elaborado en conjunto con Edmundo Canedo Cervantes.
+
+### Laboratorio 23:
+
+Éste laboratorio fue elaborado en conjunto con Yael Charles Marin
