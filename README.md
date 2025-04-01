@@ -94,8 +94,12 @@ npm start
 
 ### Laboratorio 22:
 
-Éste laboratorio fue implementado en el proyecto elaborado en conjunto con Edmundo Canedo Cervantes.
+Éste laboratorio fue implementado en el proyecto elaborado en conjunto con [Edmundo Canedo Cervantes](https://github.com/EdCanCe/WorkCells/commit/a7b8a15e70176357f7c517814b51026e73fb183b).
 
 ### Laboratorio 23:
 
 Éste laboratorio fue elaborado en conjunto con Yael Charles Marin
+
+### Laboratorio 26:
+
+Éste laboratorio fue elaborado en conjunto con [Edmundo Canedo Cervantes](https://github.com/EdCanCe/This-is-not-a-repo...again/commit/4a9f7d32f645be385263986363079049aeef48b8)
