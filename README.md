@@ -100,6 +100,10 @@ npm start
 
 Éste laboratorio fue elaborado en conjunto con Yael Charles Marin
 
+### Laboratorio 24:
+
+Éste laboratorio fue implementado en el proyecto Yael Charles Marin
+
 ### Laboratorio 26:
 
 Éste laboratorio fue elaborado en conjunto con [Edmundo Canedo Cervantes](https://github.com/EdCanCe/This-is-not-a-repo...again/commit/4a9f7d32f645be385263986363079049aeef48b8)
