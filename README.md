@@ -82,7 +82,7 @@ npm start
 
 ### Laboratorio 19:
 
-Éste laboratorio fue elaborado en conjunto con Manuel Bajos Rivera
+Éste laboratorio fue elaborado en conjunto con [Manuel Bajos Rivera](https://github.com/EmilioQuinonez/Lab/commit/0dd014c3282262b417e967789b833456761bf6b3)
 
 ### Laboratorio 20:
 
@@ -98,11 +98,15 @@ npm start
 
 ### Laboratorio 23:
 
-Éste laboratorio fue elaborado en conjunto con Yael Charles Marin
+Éste laboratorio fue elaborado en conjunto con [Yael Charles Marin](https://github.com/YaelChar417/lab1/commit/eb11092f43355aad7c1d469640fb138d107f2522)
 
 ### Laboratorio 24:
 
-Éste laboratorio fue implementado en el proyecto Yael Charles Marin
+Éste laboratorio fue implementado en el proyecto [Yael Charles Marin](https://github.com/EdCanCe/WorkCells/commit/1d47a4a81ccf676f2e30c1ddd8ff37db2ac06ce4)
+
+### Laboratorio 25:
+
+Éste laboratorio fue elaborado en conjunto con [Manuel Bajos Rivera](https://github.com/Manu090704/not_a_repo/commit/73b5587c8af2600db353a8a15de39c459c0a42d7)
 
 ### Laboratorio 26:
 
