@@ -102,7 +102,7 @@ npm start
 
 ### Laboratorio 24:
 
-Éste laboratorio fue implementado en el proyecto [Yael Charles Marin](https://github.com/EdCanCe/WorkCells/commit/1d47a4a81ccf676f2e30c1ddd8ff37db2ac06ce4)
+Éste laboratorio fue implementado en el proyecto en conjunto con [Yael Charles Marin](https://github.com/EdCanCe/WorkCells/commit/1d47a4a81ccf676f2e30c1ddd8ff37db2ac06ce4)
 
 ### Laboratorio 25:
 
